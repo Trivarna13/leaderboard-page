@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Table = () => {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -15,32 +16,18 @@ const Table = () => {
 					<h2 className="text-2xl font-bold p-4">Basic Backtest</h2>
 				</div>
 				<div className="relative p-4 flex items-center justify-between">
-					<div className="w-20 bg-pink-100 p-1 rounded-lg text-center border-2 border-pink-400 font-normal">
+					<div className="w-20 bg-pink-100 p-2 rounded-lg text-center border border-pink-400 font-normal">
 						Slippage
 					</div>
 					<button
 						id="dropdownActionButton"
 						onClick={toggleDropdown}
-						className="w-24 inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5"
+						className="w-24 inline-flex items-center text-gray-500 bg-white border border-pink-400 focus:outline-none hover:bg-pink-100 focus:ring-4 focus:ring-pink-100 font-medium rounded-lg text-sm px-3 py-1.5"
 						type="button"
 					>
 						<span className="sr-only">Slippage</span>
-						0%
-						<svg
-							className="w-3 h-2.5 ms-2.5 ml-10 text-pink-400"
-							aria-hidden="true"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 10 6"
-						>
-							<path
-								stroke="currentColor"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth="2"
-								d="m1 1 4 4 4-4"
-							/>
-						</svg>
+						<div className="mr-4">0%</div>
+						<RiArrowDropDownLine className="text-2xl ms-3.5 ml-10 text-pink-400" />
 					</button>
 				</div>
 			</div>
